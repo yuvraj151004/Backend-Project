@@ -1,0 +1,18 @@
+# models.py
+
+import sqlite3
+
+conn = sqlite3.connect('assistants.db')
+c = conn.cursor()
+
+# Create assistants table
+c.execute('''CREATE TABLE IF NOT EXISTS assistants
+             (id INTEGER PRIMARY KEY AUTOINCREMENT,
+              name TEXT NOT NULL,
+              role TEXT NOT NULL,
+              email TEXT UNIQUE NOT NULL,
+              phone_number TEXT UNIQUE NOT NULL,
+              created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)''')
+
+conn.commit()
+conn.close()
