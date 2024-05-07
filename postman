@@ -1,0 +1,19 @@
+# for giving data
+{
+    "name": "John Doe",
+    "role": "Assistant",
+    "email": "john@example.com",
+    "phone_number": "1234567890"
+}
+
+
+# for updating
+{
+    "name": "John Smith"
+}
+
+# for deletion use Delete
+
+
+
+
